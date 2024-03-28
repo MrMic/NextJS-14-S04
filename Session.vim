@@ -13,10 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+badd +17 pages/clients/index.js
+badd +15 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/pages/clients/\[id]/index.js
 argglobal
 %argdel
+edit pages/clients/index.js
 argglobal
-enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -25,6 +27,22 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
+silent! normal! zE
+4,7fold
+16,20fold
+14,21fold
+13,22fold
+12,23fold
+10,24fold
+9,25fold
+3,25fold
+let &fdl = &fdl
+let s:l = 17 - ((16 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 17
+normal! 01|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
