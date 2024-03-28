@@ -15,6 +15,8 @@ else
 endif
 badd +17 pages/clients/index.js
 badd +15 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/pages/clients/\[id]/index.js
+badd +9 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/pages/404.js
+badd +9 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/.github/worflows/release.yml
 argglobal
 %argdel
 edit pages/clients/index.js
@@ -42,7 +44,7 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 17
-normal! 01|
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
