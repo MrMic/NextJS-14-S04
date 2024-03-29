@@ -15,6 +15,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: "Tar files"
+        run: tar -czvf release.tar.gz ./
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: release.tar.gz
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:

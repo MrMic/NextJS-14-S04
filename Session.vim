@@ -16,7 +16,7 @@ endif
 badd +17 pages/clients/index.js
 badd +15 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/pages/clients/\[id]/index.js
 badd +9 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/pages/404.js
-badd +9 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/.github/worflows/release.yml
+badd +24 ~/DEV/NEXTJS_UDEMY/Section04/nextjs-course-code-01-getting-started-starting-project/.github/workflows/release.yml
 argglobal
 %argdel
 edit pages/clients/index.js
